@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алина Nails — маникюр на Новой Риге</title>
+<meta name="description" content="Маникюр и педикюр в Красногорске на Новой Риге. Стерильно, аккуратно, гарантия 7 дней.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdf3f1; --surface:#ffffff; --ink:#2b1b22; --muted:#7d6670;
+  --accent:#d9637e; --accent-soft:#f7d9df; --line:#f0dde0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:Unbounded,system-ui,sans-serif;font-weight:700;line-height:1.15;letter-spacing:-.01em}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;text-decoration:none;
+  padding:14px 24px;border-radius:14px;font-weight:600;border:0;cursor:pointer;font-size:16px;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(217,99,126,.35)}
+.btn.tg{background:#2aabee}.btn.wa{background:#25d366}
+.pill{display:inline-block;background:var(--accent-soft);color:var(--accent);padding:6px 14px;border-radius:999px;font-weight:600;font-size:13px}
+
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:70px}
+.logo{font-family:Unbounded,sans-serif;font-weight:700;font-size:20px;text-decoration:none}
+.logo span{color:var(--accent)}
+
+/* hero */
+.hero{padding:40px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(34px,5.5vw,58px);margin:16px 0}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{color:var(--muted);font-size:18px;margin-bottom:26px;max-width:440px}
+.hero .actions{display:flex;gap:10px;flex-wrap:wrap}
+.facts{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.facts b{font-family:Unbounded,sans-serif;font-size:26px;display:block}
+.facts span{color:var(--muted);font-size:14px}
+.palette{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.nail{aspect-ratio:3/4.4;border-radius:999px 999px 26px 26px;box-shadow:inset 0 -14px 0 rgba(255,255,255,.25),0 10px 24px rgba(43,27,34,.12)}
+.nail:nth-child(3n+2){transform:translateY(28px)}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.palette{max-width:340px}}
+
+section{padding:70px 0}
+.title{font-size:clamp(28px,4vw,40px);margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:34px}
+
+/* prices */
+.prices{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.price{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;display:flex;flex-direction:column;gap:6px}
+.price h3{font-size:17px}
+.price p{color:var(--muted);font-size:14px;flex:1}
+.price .cost{font-family:Unbounded,sans-serif;font-size:24px;color:var(--accent);margin-top:10px}
+.price.hit{border:2px solid var(--accent);position:relative}
+.price.hit::before{content:"Чаще всего выбирают";position:absolute;top:-12px;left:20px;background:var(--accent);color:#fff;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.why div{background:var(--accent-soft);border-radius:22px;padding:24px}
+.why .ico{font-size:28px;margin-bottom:8px}
+.why h3{font-size:16px;margin-bottom:6px}
+.why p{color:var(--muted);font-size:15px}
+
+/* reviews */
+.reviews{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.review{flex:0 0 min(320px,85%);scroll-snap-align:start;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px}
+.review .who{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.review .av{width:40px;height:40px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:700}
+.review small{color:var(--muted);display:block}
+
+/* booking */
+.cta{background:var(--ink);color:#fff;border-radius:32px;padding:48px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px}
+.cta .sub{color:#cdb8c0}
+.cta ul{list-style:none;margin:20px 0 26px}
+.cta li{padding:6px 0;color:#e9dde2}
+.cta li b{color:#fff}
+form{background:#fff;color:var(--ink);border-radius:22px;padding:24px;display:grid;gap:12px}
+input,select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}
+.ok{display:none;background:#e7f4ea;color:#2c6a3a;padding:12px;border-radius:12px;font-size:14px}
+@media(max-width:760px){.cta{grid-template-columns:1fr;padding:28px 20px;border-radius:24px}}
+
+footer{padding:30px 0 40px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">alina<span>.</span>nails</a>
+    <a class="btn" href="#book" style="padding:10px 18px">Записаться</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="pill">Красногорск · Новая Рига</span>
+      <h1>Маникюр, который держится <em>3+ недели</em></h1>
+      <p>Я — Алина, мастер маникюра с опытом 6 лет. Принимаю в уютной студии у дома, работаю только со стерильными инструментами.</p>
+      <div class="actions">
+        <a class="btn" href="#book">Выбрать время</a>
+        <a class="btn tg" href="#book">Telegram</a>
+      </div>
+      <div class="facts">
+        <div><b>6 лет</b><span>опыта</span></div>
+        <div><b>1 500+</b><span>клиенток</span></div>
+        <div><b>7 дней</b><span>гарантия</span></div>
+      </div>
+    </div>
+    <div class="palette" aria-hidden="true">
+      <div class="nail" style="background:linear-gradient(160deg,#f6c8d1,#d9637e)"></div>
+      <div class="nail" style="background:linear-gradient(160deg,#fbe9e4,#e9bfb3)"></div>
+      <div class="nail" style="background:linear-gradient(160deg,#8b2f45,#4d1626)"></div>
+      <div class="nail" style="background:linear-gradient(160deg,#fff,#f3dede)"></div>
+      <div class="nail" style="background:linear-gradient(160deg,#c9a7e0,#8f6bb0)"></div>
+      <div class="nail" style="background:linear-gradient(160deg,#f2d3a8,#c99a5c)"></div>
+    </div>
+  </div>
+</div>
+
+<section id="prices">
+  <div class="wrap">
+    <h2 class="title">Услуги и цены</h2>
+    <p class="sub">Снятие старого покрытия уже включено в стоимость.</p>
+    <div class="prices">
+      <div class="price"><h3>Маникюр без покрытия</h3><p>Обработка кутикулы, форма, уход</p><div class="cost">900 ₽</div></div>
+      <div class="price hit"><h3>Маникюр + гель-лак</h3><p>Однотонное покрытие, выравнивание</p><div class="cost">1 800 ₽</div></div>
+      <div class="price"><h3>Наращивание</h3><p>Любая длина и форма</p><div class="cost">от 2 800 ₽</div></div>
+      <div class="price"><h3>Педикюр + покрытие</h3><p>Аппаратный педикюр, гель-лак</p><div class="cost">2 200 ₽</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:10px">
+  <div class="wrap">
+    <h2 class="title">Почему ко мне возвращаются</h2>
+    <p class="sub">Без спешки и без сюрпризов.</p>
+    <div class="why">
+      <div><div class="ico">🧼</div><h3>Стерильность</h3><p>Сухожар и крафт-пакеты — вскрываю при вас.</p></div>
+      <div><div class="ico">🛡️</div><h3>Гарантия 7 дней</h3><p>Если что-то отошло — исправлю бесплатно.</p></div>
+      <div><div class="ico">☕</div><h3>Уютно</h3><p>Чай, кофе и сериал, пока вы на процедуре.</p></div>
+      <div><div class="ico">🚗</div><h3>Удобно добраться</h3><p>Парковка у дома, 5 минут от Новой Риги.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:10px">
+  <div class="wrap">
+    <h2 class="title">Отзывы</h2>
+    <p class="sub">Примеры отзывов для демо-версии сайта. Листайте →</p>
+    <div class="reviews">
+      <div class="review"><div class="who"><div class="av">М</div><div><b>Мария</b><small>Павшинская пойма</small></div></div><p>Хожу к Алине уже второй год. Покрытие держится месяц, ни одного скола!</p></div>
+      <div class="review"><div class="who"><div class="av">Е</div><div><b>Елена</b><small>Опалиха</small></div></div><p>Очень чисто и спокойно. Наконец-то нашла своего мастера рядом.</p></div>
+      <div class="review"><div class="who"><div class="av">К</div><div><b>Кристина</b><small>Нахабино</small></div></div><p>Сделала наращивание к свадьбе подруги — все спрашивали, где делала.</p></div>
+      <div class="review"><div class="who"><div class="av">Д</div><div><b>Дарья</b><small>Красногорск</small></div></div><p>Удобная запись, всегда вовремя. Цены честные, без доплат.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <h2 class="title">Запишитесь на удобное время</h2>
+        <p class="sub">Отвечаю в течение часа с 9:00 до 21:00.</p>
+        <ul>
+          <li><b>Адрес:</b> г. Красногорск, ул. Примерная, 5 (студия на 1 этаже)</li>
+          <li><b>Режим:</b> ежедневно 10:00–21:00, по записи</li>
+          <li><b>Телефон:</b> +7 999 000-00-00</li>
+        </ul>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn wa" href="#book">WhatsApp</a>
+          <a class="btn tg" href="#book">Telegram</a>
+        </div>
+      </div>
+      <form id="f">
+        <input required placeholder="Ваше имя">
+        <input required type="tel" placeholder="Телефон">
+        <select><option>Маникюр + гель-лак</option><option>Маникюр без покрытия</option><option>Наращивание</option><option>Педикюр + покрытие</option></select>
+        <button class="btn" type="submit">Отправить заявку</button>
+        <div class="ok" id="ok">Заявка принята! Напишу вам в течение часа. (Демо: заявка никуда не отправляется.)</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© alina.nails, 2026</span>
+    <span>Демонстрационный проект — все данные вымышлены</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();document.getElementById('ok').style.display='block';this.reset();
+});
+</script>
+</body>
+</html>
